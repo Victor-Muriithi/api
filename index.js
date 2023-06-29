@@ -5,6 +5,12 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
+app.listen(5000)
+console.log("app running on port 5000")
+app.get("/test", function (req, res) {
+    res.send('Hello World now!')
+  })
+
 app.post('/ussd', (req, res) => {
     // Read the variables sent via POST from our API
     const {
