@@ -6,7 +6,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 console.log(`here ${process.env.PORT}`)
-app.get("/test", function (req, res) {
+app.get("/", function (req, res) {
     res.send('Hello World now!')
   })
 
