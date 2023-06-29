@@ -5,7 +5,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.listen(5000)
+app.listen(5000 || process.env.PORT)
 console.log("app running on port 5000")
 app.get("/test", function (req, res) {
     res.send('Hello World now!')
