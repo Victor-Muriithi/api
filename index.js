@@ -6,7 +6,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.listen(5000 || process.env.PORT)
-console.log("app running on port 5000")
+console.log(`here ${process.env.PORT}`)
 app.get("/test", function (req, res) {
     res.send('Hello World now!')
   })
